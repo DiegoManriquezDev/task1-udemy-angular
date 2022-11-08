@@ -1,0 +1,19 @@
+<button 
+class="bg-blue-500 hover:bg-blue-700 text-white font-bold m-2 py-2 px-4 rounded-full"
+(click)="displayParagraph()">
+Display Details
+</button>
+
+<p 
+*ngIf="display"
+class="block text-gray-700 text-sm font-bold m-2 py-2 px-3">
+Secret Password = Erika
+</p>
+
+<ul>
+    <li *ngFor="let click of clicks"
+        [ngStyle]="click >= 5 && {backgroundColor: 'blue'}"
+        [ngClass]="{clickLog: click >= 5}">
+        {{click}}
+    </li>
+</ul>
