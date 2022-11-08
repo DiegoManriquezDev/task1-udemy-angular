@@ -1,0 +1,17 @@
+<input 
+    type="text"
+    class="shadow appearance-none border rounded w-2/4 m-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username"
+    [(ngModel)]="username"    
+>
+<br>
+
+<p class="block text-gray-700 text-sm font-bold m-2 py-2 px-3">{{username}}</p>
+
+<br>
+
+
+<button 
+    class="bg-blue-500 hover:bg-blue-700 text-white font-bold m-2 py-2 px-4 rounded-full"
+    [disabled]="!username"
+    (click)="resetInput()">
+Reset</button>
